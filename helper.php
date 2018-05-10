@@ -1,10 +1,14 @@
 <?php
 
-require 'filter.php';
+include("Upolader.php");
+
+$up = new Uploader($ftp_server, $porta, $username, $password);
+$up->upload();
+
 
 //Tecnica postback
 //se secondo accesso prendo i dati dal form
-if (isset($_POST['send_file'])) {
+/*if (isset($_POST['send_file'])) {
     //validazione dei parametri di connessione
     if (($ftp_server != 'ftp_server') && ($ftp_server != '')) {
         if (($username != 'username') && ($username != '')) {
@@ -40,5 +44,9 @@ if (isset($_POST['send_file'])) {
     } else {
         echo "<b>Inserire il server ftp</b>";
     }
-}
+}*/
+
+
+
+
 ?>
