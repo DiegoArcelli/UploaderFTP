@@ -27,7 +27,6 @@ class FTPClass {
     }
     
     public function connetti(){
-        echo "echooooooooo" . $this->ftp_server . " " . $this->username;
         $file = $_FILES['file']['tmp_name']; //nome file con percorso assoluto
         $new_file = $_FILES['file']['name']; //nome file senza percorso
         //apertura connessione ftp
